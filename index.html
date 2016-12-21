@@ -1,0 +1,17 @@
+<html ng-app='myApp'>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/diff_match_patch/20121119/diff_match_patch_uncompressed.js"></script>
+    <script src = "controller.js"></script>
+</head>
+
+<body ng-controller='commentCtrl'>
+<h1>Displaying the old and current values here!</h1>
+    Old: {{oldVal}}<br>
+    New: {{newVal}}
+<hr>
+Input: <input ng-model="vm.comment" ng-model-options="{debounce: 3000}" ng-change="syncComment(vm.comment,'{{vm.comment}}')">
+</body>
+
+</html>
