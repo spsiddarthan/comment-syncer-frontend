@@ -1,12 +1,12 @@
 angular.module('myApp', [])
-    .controller('commentCtrl', commentCtrl)
+    .controller('CommentController', CommentController)
     .constant('vm', function(){
         return {
             comment: ''
         };
     });
 
-function commentCtrl($scope, vm, $http) {
+function CommentController($scope, vm, $http) {
     $scope.vm = vm();
     $scope.syncComment = function(newVal, oldVal) {
         $scope.oldVal = oldVal;
