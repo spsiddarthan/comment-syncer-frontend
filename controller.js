@@ -17,7 +17,6 @@ function CommentController($scope, vm, $http) {
         var data = {
             "commentId": "1234",
             "questionId": "123",
-            "commentText": $scope.vm.comment,
             "userId": "1234",
             "diffs": diffs
         };
